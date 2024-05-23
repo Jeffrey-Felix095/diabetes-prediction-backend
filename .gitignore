@@ -2,6 +2,7 @@
 ml_models/*
 
 .env
+env
 
 ########################################################################
 # Python - https://github.com/github/gitignore/blob/master/Python.gitignore

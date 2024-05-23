@@ -1,7 +1,8 @@
 from fastapi import APIRouter, HTTPException
 from schemas.schemas import Features, Prediction
 import pandas as pd
-#from models.rf_model import model
+from models.rf_model import load_model
+model = load_model('./models/random_forest_model.pkl')
 
 router = APIRouter()
 
@@ -16,8 +17,7 @@ def predict(features: Features):
         data = pd.DataFrame([features.dict()])
 
         # Realizar la predicción
-        prediction = [0]
-        #model.predict(data)
+        prediction = model.predict(data)
 
         # Retornar la predicción en formato JSON
         return {"diabetes_prediction": int(prediction[0])}

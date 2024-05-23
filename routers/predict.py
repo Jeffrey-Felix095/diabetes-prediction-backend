@@ -1,26 +1,33 @@
-from fastapi import APIRouter, HTTPException
-from schemas.schemas import Features, Prediction
 import pandas as pd
-from models.rf_model import load_model
-model = load_model('./models/Random Forest_model.pkl')
+
+from fastapi import APIRouter, HTTPException
+from schemas import Features, Prediction
+
+# from models.rf_model import load_model
+# model = load_model('./models/Random Forest_model.pkl')
 
 router = APIRouter()
 
 @router.post("/predict", response_model=Prediction)
 def predict(features: Features):
+
+    print(Features)
+
     try:
         # Validar los datos de entrada
         if not isinstance(features, Features):
             raise HTTPException(status_code=400, detail="Los datos de entrada no son válidos")
 
-        # Convertir los datos en un DataFrame de pandas
-        data = pd.DataFrame([features.dict()])
+        # # Convertir los datos en un DataFrame de pandas
+        # data = pd.DataFrame([features.dict()])
 
-        # Realizar la predicción
-        prediction = model.predict(data)
+        # # Realizar la predicción
+        # prediction = model.predict(data)
 
-        # Retornar la predicción en formato JSON
-        return {"diabetes_prediction": int(prediction[0])}
+        # # Retornar la predicción en formato JSON
+    #    return {"diabetes_prediction": int(prediction[0])}
+        return {"diabetes_prediction": 1}
+    
 
     except Exception as e:
         # Manejar cualquier excepción y retornar un error HTTP 500

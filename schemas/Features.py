@@ -16,6 +16,3 @@ class Features(BaseModel):
     Age: int
     Education: int
     Income: int
-
-class Prediction(BaseModel):
-    diabetes_prediction: int

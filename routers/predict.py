@@ -2,7 +2,7 @@ from fastapi import APIRouter, HTTPException
 from schemas.schemas import Features, Prediction
 import pandas as pd
 from models.rf_model import load_model
-model = load_model('./models/random_forest_model.pkl')
+model = load_model('./models/Random Forest_model.pkl')
 
 router = APIRouter()
 

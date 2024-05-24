@@ -1,5 +1,8 @@
-azure_storage==0.37.0
-fastapi==0.111.0
-pandas==2.2.2
-pydantic==2.7.1
-uvicorn==0.29.0
+pandas
+pydantic
+python-dotenv
+fastapi
+uvicorn
+azure-storage-blob
+joblib
+scikit-learn==1.2.2

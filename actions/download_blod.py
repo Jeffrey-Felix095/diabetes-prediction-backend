@@ -14,4 +14,4 @@ def download_blod(blob_name: str) -> str:
     with open(file_path, "wb") as download_file:
         download_file.write(blob_client.download_blob().readall())
     
-    return file_path, download_file 
+    return download_file 

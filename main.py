@@ -8,8 +8,6 @@ from fastapi.middleware.cors import CORSMiddleware
 from actions import load_models
 from routers import predict
 
-from dotenv import load_dotenv
-load_dotenv()
 
 @asynccontextmanager
 async def init(app: FastAPI):

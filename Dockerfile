@@ -7,6 +7,5 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . /app
 
-RUN python -c "from actions.download_blod import download_blod; download_blod('random_forest_model.pkl')"
 
 CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]

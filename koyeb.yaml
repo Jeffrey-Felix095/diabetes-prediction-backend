@@ -1,0 +1,14 @@
+version: '1'
+name: my-fastapi-app
+services:
+  - name: my-fastapi-service
+    image: <tu-imagen-de-docker>
+    environment:
+      - AZURE_STORAGE_ACCOUNT_NAME=<nombre-de-cuenta>
+      - AZURE_STORAGE_ACCOUNT_KEY=<clave-de-cuenta>
+    ports:
+      - 8000
+    replicas: 1
+    routes:
+      - path: /
+        port: 8000

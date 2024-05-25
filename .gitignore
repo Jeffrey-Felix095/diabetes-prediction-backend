@@ -1,6 +1,6 @@
 /venv
 ml_models/*
-!ml_models/xavie-fod.jpg
+!ml_models\xavier-god.jpg
 
 .env
 env

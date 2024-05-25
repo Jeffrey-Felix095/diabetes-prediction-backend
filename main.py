@@ -6,7 +6,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 from actions import load_models, clear_models
-from routers import predict
+from routers import predict, health
 
 
 @asynccontextmanager
@@ -41,6 +41,7 @@ app.add_middleware(
 
 # Incluye el router para las rutas del modelo de ML
 app.include_router(predict.router)
+app.include_router(health.router)
 
 if __name__ == "__main__":
     uvicorn.run(app, host="0.0.0.0", port=8000)

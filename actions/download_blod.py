@@ -1,8 +1,13 @@
 import os
 from azure.storage.blob import BlobServiceClient
-
+from dotenv import load_dotenv
+import os
+load_dotenv()
 
 BLOB_CONNECTION_STRING = os.getenv('BLOB_CONNECTION_STRING')
+if not BLOB_CONNECTION_STRING:
+    raise ValueError("No BLOB_CONNECTION_STRING found in environment variables")
+
 CONTAINER_NAME = "models"
 
 def download_blod(blob_name: str) -> str:

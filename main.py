@@ -15,8 +15,8 @@ load_dotenv()
 async def init(app: FastAPI):
     # The first part of the function, before the yield, will be executed before the application starts.
     
-    models = load_models()
-    print(models)
+    #models = load_models()
+    #print(models)
 
     yield
     # And the part after the yield will be executed after the application has   finished.

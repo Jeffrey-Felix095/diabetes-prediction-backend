@@ -22,14 +22,18 @@ def predict(features: Features):
         data = pd.DataFrame([features.model_dump()])
 
         random_forest_model = models["random_forest_model"]["model"]
-
+        decision_tree_model =  models["decision_tree_model"]["model"]
+        knn_model =  models["knn_model"]["model"]
         # Realizar la predicción
-        prediction = random_forest_model.predict(data)
-
-        # Retornar la predicción en formato JSON
+        prediction_rf = random_forest_model.predict(data)
+        prediction_dt = decision_tree_model.predict(data)
+        prediction_knn = knn_model.predict(data)
+        # Retornar la predicción en formato JSON    
         return {
-            "diabetes_prediction": int(prediction[0]),
-            "random_forest_prediction": int(prediction[0])
+            "diabetes_prediction": int(prediction_rf[0]),
+            "random_forest_prediction": int(prediction_rf[0]),
+            "decision_tree_prediction": int(prediction_dt[0]),
+            "knn_prediction": int(prediction_knn[0])
         }
 
     except Exception as e:

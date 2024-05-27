@@ -6,7 +6,13 @@ models = {
     #     "blob_name": "xavier-xavier.jpg"
     # },
     "random_forest_model": {
-        "blob_name": "random_forest_model.pkl"
+        "blob_name": "Random Forest (Tuned)_model.pkl"
+    },
+    "decision_tree_model": {
+        "blob_name": "Decision Tree (Tuned)_model.pkl"
+    },
+    "knn_model": {
+        "blob_name": "K-Nearest Neighbors (Tuned)_model.pkl"
     }
 }
 

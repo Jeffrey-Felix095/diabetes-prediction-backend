@@ -21,11 +21,11 @@ def predict(features: Features):
         # Convertir los datos en un DataFrame de pandas
         data = pd.DataFrame([features.model_dump()])
 
-        # random_forest_model = models["random_forest_model"]["model"]
-        decision_tree_model =  models["decision_tree_model"].get("model")
+        random_forest_model = models["random_forest_model"]["model"]
+        # decision_tree_model =  models["decision_tree_model"].get("model")
         # knn_model =  models["knn_model"]["model"]
         
-        if decision_tree_model == None: 
+        if random_forest_model == None: 
             raise HTTPException(
                 status_code=500,
                 detail="Ocurrió un error al procesar la solicitud"
@@ -33,7 +33,7 @@ def predict(features: Features):
         
         # Realizar la predicción
         # prediction_rf = random_forest_model.predict(data)
-        prediction_dt = decision_tree_model.predict(data)
+        prediction_dt = random_forest_model.predict(data)
         # prediction_knn = knn_model.predict(data)
         # Retornar la predicción en formato JSON    
         

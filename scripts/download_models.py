@@ -29,12 +29,12 @@ models = {
     # "xavier": {
     #     "blob_name": "xavier-xavier.jpg"
     # },
-    # "random_forest_model": {
-    #     "blob_name": "Random Forest (Tuned)_model.pkl"
-    # },
-    "decision_tree_model": {
-        "file_path": "Decision Tree (Tuned)_model.pkl"
+    "random_forest_model": {
+        "blob_name": "Random Forest (Tuned)_model.pkl"
     },
+    # "decision_tree_model": {
+    #     "file_path": "Decision Tree (Tuned)_model.pkl"
+    # },
     # "knn_model": {
     #     "blob_name": "K-Nearest Neighbors (Tuned)_model.pkl"
     # }

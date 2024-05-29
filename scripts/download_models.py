@@ -6,7 +6,8 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-BLOB_CONNECTION_STRING = os.getenv('BLOB_CONNECTION_STRING')
+BLOB_CONNECTION_STRING = os.environ.get('BLOB_CONNECTION_STRING')
+
 if not BLOB_CONNECTION_STRING:
     raise ValueError("No BLOB_CONNECTION_STRING found in environment variables")
 

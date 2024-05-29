@@ -6,3 +6,4 @@ uvicorn
 azure-storage-blob
 joblib
 scikit-learn==1.2.2
+dotenv

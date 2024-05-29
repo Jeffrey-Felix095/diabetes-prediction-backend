@@ -48,5 +48,5 @@ for model in models.values():
     try:
         model["model"] = joblib.load(file_path) 
     except FileNotFoundError:
-        print(f"Model file {model['path']} not found. Downloading from blod storage.")
+        print(f"Model file {model['file_path']} not found. Downloading from blod storage.")
         download_blod(blod_name)

@@ -27,16 +27,16 @@ def download_blod(blob_name: str) -> str:
 
 models = {
     # "xavier": {
-    #     "blob_name": "xavier-xavier.jpg"
+    #     "file_path": "xavier-xavier.jpg"
     # },
     "random_forest_model": {
-        "blob_name": "Random Forest (Tuned)_model.pkl"
+        "file_path": "Random Forest (Tuned)_model.pkl"
     },
     # "decision_tree_model": {
     #     "file_path": "Decision Tree (Tuned)_model.pkl"
     # },
     # "knn_model": {
-    #     "blob_name": "K-Nearest Neighbors (Tuned)_model.pkl"
+    #     "file_path": "K-Nearest Neighbors (Tuned)_model.pkl"
     # }
 }
 

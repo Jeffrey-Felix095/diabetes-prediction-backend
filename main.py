@@ -5,24 +5,12 @@ from contextlib import asynccontextmanager
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from actions import load_models
 from routers import predict
 
 from dotenv import load_dotenv
 load_dotenv()
 
-@asynccontextmanager
-async def init(app: FastAPI):
-    # The first part of the function, before the yield, will be executed before the application starts.
-    
-    #models = load_models()
-    #print(models)
-
-    yield
-    # And the part after the yield will be executed after the application has   finished.
-    
-
-app = FastAPI(lifespan=init)
+app = FastAPI()
 
 # Configuración de CORS
 origins = [

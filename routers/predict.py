@@ -22,7 +22,7 @@ def predict(features: Features):
         data = pd.DataFrame([features.model_dump()])
 
         # random_forest_model = models["random_forest_model"]["model"]
-        decision_tree_model =  models["decision_tree_model"].get("model")
+        ensemble_model =  models["ensemble_model"].get("model")
         # knn_model =  models["knn_model"]["model"]
         
         if decision_tree_model == None: 
@@ -33,7 +33,7 @@ def predict(features: Features):
         
         # Realizar la predicción
         # prediction_rf = random_forest_model.predict(data)
-        prediction_dt = decision_tree_model.predict(data)
+        prediction_dt = ensemble_model.predict(data)
         # prediction_knn = knn_model.predict(data)
         # Retornar la predicción en formato JSON    
         

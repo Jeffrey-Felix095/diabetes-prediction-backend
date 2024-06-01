@@ -14,7 +14,7 @@ models = {
     #     "file_path": "K-Nearest Neighbors (Tuned)_model.pkl"
     # },
          "ensemble_model": {
-         "blob_name": "Final Ensemble_model.pkl"
+         " file_path": "Final Ensemble_model.pkl"
      }
 }
 

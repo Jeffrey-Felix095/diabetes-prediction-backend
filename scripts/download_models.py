@@ -36,7 +36,7 @@ models = {
     #    "file_path": "Decision Tree (Tuned)_model.pkl"
     #},
      "ensemble_model": {
-         " file_path": "Final Ensemble_model.pkl"
+         "file_path": "Final Ensemble_model.pkl"
      }
 }
 

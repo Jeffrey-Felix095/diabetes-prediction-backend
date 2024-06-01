@@ -13,8 +13,8 @@ models = {
     # "knn_model": {
     #     "file_path": "K-Nearest Neighbors (Tuned)_model.pkl"
     # },
-         "ensemble_model": {
-         " file_path": "Final Ensemble_model.pkl"
+        "ensemble_model": {
+        "file_path": "Final Ensemble_model.pkl"
      }
 }
 

@@ -25,7 +25,7 @@ def predict(features: Features):
         ensemble_model =  models["ensemble_model"].get("model")
         # knn_model =  models["knn_model"]["model"]
         
-        if decision_tree_model == None: 
+        if ensemble_model == None: 
             raise HTTPException(
                 status_code=500,
                 detail="Ocurrió un error al procesar la solicitud"
@@ -33,12 +33,12 @@ def predict(features: Features):
         
         # Realizar la predicción
         # prediction_rf = random_forest_model.predict(data)
-        prediction_dt = ensemble_model.predict(data)
+        prediction_ensemble = ensemble_model.predict(data)
         # prediction_knn = knn_model.predict(data)
         # Retornar la predicción en formato JSON    
         
         return {
-            "diabetes_prediction": int(prediction_dt[0])
+            "diabetes_prediction": int(prediction_ensemble[0])
         }
 
     except Exception as e:
